@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    color: #333;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  .upload-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 2em;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .upload-box label {
+    font-weight: 500;
+  }
+  
+  .upload-box input,
+  .upload-box select,
+  .upload-box button {
+    padding: 0.6em;
+    font-size: 1em;
+    flex: 1 1 200px;
+    max-width: 300px;
+  }
+  
+  #resourceGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  .resource-card {
+    background: white;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .resource-card h4 {
+    margin-top: 0;
+    color: #4CAF50;
+  }
+  
+  iframe, img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #ddd;
+    margin-top: 2em;
+  }
+  
+  @media (max-width: 600px) {
+    .upload-box {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  
