@@ -18,4 +18,9 @@ const app = initializeApp(firebaseConfig);
 // ✅ Export both storage and db
 export const storage = getStorage(app);
 export const db = getFirestore(app);
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
 
+initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider("6Le-i3MrAAAAAH9QMiF-D9LNvWHpjic7cZ6Cw7sy"), // 👈 From Google
+    isTokenAutoRefreshEnabled: true
+});
