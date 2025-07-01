@@ -1,12 +1,9 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="A collaborative platform to upload and view study resources globally (PDF, DOCX, TXT, Images)." />
     <title>Study Resource Hub</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
@@ -15,26 +12,21 @@
 <body>
     <header>
         <h1>📚 Study Resource Hub</h1>
-        <p>Upload and view study materials (PDF, DOCX, TXT, Images)</p>
+        <p>Admin uploads | Viewers can comment</p>
     </header>
 
     <section class="upload-box">
-        <label for="fileInput">Select File:</label>
-        <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt,image/*" />
-
-        <label for="categorySelect">Category:</label>
+        <input type="file" id="fileInput" accept=".pdf,.docx,.txt,image/*" />
         <select id="categorySelect">
             <option value="General">General</option>
             <option value="Math">Math</option>
             <option value="Science">Science</option>
-            <option value="History">History</option>
         </select>
-
-        <button id="uploadBtn">Upload & View</button>
+        <button onclick="handleUpload()">Upload</button>
     </section>
 
     <main id="resourceGallery">
-        <h2 style="text-align:center;">Uploaded Resources</h2>
+        <h2>Uploaded Resources</h2>
     </main>
 
     <footer>
@@ -43,9 +35,6 @@
 
     <script type="module" src="firebase-init.js"></script>
     <script type="module" src="script.js"></script>
-    <script>
-        document.getElementById('uploadBtn').addEventListener('click', () => handleUpload());
-    </script>
 </body>
 
 </html>
